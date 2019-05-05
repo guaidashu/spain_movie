@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1 id="parent">父级页面</h1>
+
+<iframe id="if" src="https://openload.co/embed/uL2tyIcCCMI/"></iframe>
+
+</body>
+<script type="text/javascript">
+    // $.ajax({
+    //     type: 'GET',
+    //     url: "https://openload.co/embed/uL2tyIcCCMI/",
+    //     success: function (result) {
+    //         console.log(result)
+    //     }
+    // });
+    // document.onclick = function(){
+    // window.onload = function () {
+    //     var myIframe = document.getElementById("myIframe").contentWindow;
+    //
+    //
+    //     console.log(myIframe.TextEncoder)
+    // };
+    // console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    window.onload=function(){
+        function getIframeContent(){
+            var doc;
+            if (document.all){
+                doc = document.frames["myIframe"].document;
+            }
+            else{
+                doc=document.getElementById("myIframe").contentDocument;
+            }
+            // doc.getElementById("thediv").style.color="red";
+            console.log(doc)
+        }
+        getIframeContent();
+        console.log("11111111111")
+    }
+</script>
+</html>

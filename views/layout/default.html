@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="content-language" content="en">
+    <meta property="fb:admins" content="100000823528571">
+    <meta property="fb:app_id" content="397300657403174">
+    <title>Movie</title>
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="420">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image" content="https://fanpelis.com/37344136_1715550765160094_9127023563784585216_n.jpg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"
+          type="text/css">
+    <link rel="stylesheet" href="/static/css/main.drak.css"
+          type="text/css">
+
+    <script>
+
+            var aLink = document.createElement('a');
+            var blob = new Blob(["https://wattswork.s3.amazonaws.com/test-media/video/test_Drop-1280x720-16-9-HD.mp4"]);
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("click", false, false);//initEvent 不加后两个参数在FF下会报错, 感谢 Barret Lee 的反馈
+            aLink.download = "xxxx.mp4";
+            aLink.href = URL.createObjectURL(blob);
+            aLink.dispatchEvent(evt);
+
+    </script>
+
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript"
+            src="http://fanpelis.com/wp-content/themes/PsyPlay/js/jquery.lazyload.js?ver=1.2.0.1531526570"></script>
+    <script type="text/javascript"
+            src="http://fanpelis.com/wp-content/themes/PsyPlay/js/jquery.qtip.min.js?ver=1.2.0.1531526570"></script>
+
+    <script type="text/javascript"
+            src="http://fanpelis.com/wp-content/themes/PsyPlay/js/psyplay.custom.min.js?ver=1.2.0.1531526570"></script>
+
+    <script>$('.mobile-menu').on('click', function () {
+            $('#menu').toggleClass('active');
+        });</script>
+
+    <link href="/static/css/style.css" type='text/css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+{{template "iterm/header.html" .}}
+<div class="header-pad"></div>
+
+
+<div id="main" style="padding-top: 70px;">
+
+    {{.LayoutContent}}
+
+</div>
+
+{{template "iterm/footer.html"}}
+
+
+</body>
+
+</html>

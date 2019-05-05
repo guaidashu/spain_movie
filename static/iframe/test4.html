@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript">
+        function abc(re) {
+            alert(re.trans_result[0].src + "翻译的结果为" + re.trans_result[0].dst+"");
+        }
+        function onClick()
+        {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            var src = document.getElementById("word").value;
+            script.src = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=2ALMz6WqUEcsBg4BS91Eppq3&q="+src+"&from=auto&to=auto&callback=abc";
+            document.
+            document.body.a(script);
+        }
+    </script>
+</head>
+
+<body>
+<input type="text" value="pen" id="word"/>
+<input type="button" value="click me!" onclick="onClick()"/>
+</body>
+</html >

@@ -1,0 +1,118 @@
+<html>
+
+<head>
+	<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="">
+	<meta name="data-spm" content="a2h0t">
+	<meta name="copyright" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!--这meta的作用就是删除默认的苹果工具栏和菜单栏-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--网站开启对web app程序的支持-->
+	<meta name="apple-touch-fullscreen" content="yes">
+	<!--在web app应用下状态条（屏幕顶部条）的颜色-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!--移动web页面是否自动探测电话号码-->
+	<meta http-equiv="x-rim-auto-match" content="none">
+	<!--移动端版本兼容 start -->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+
+</head>
+
+<body data-spm="9542499">
+
+	<link rel="stylesheet" id="YT-loginFrameCss" href="/static/css/login.css">
+	<input type="hidden" hidden="" id="l_callback" name="l_callback" value="http://www.youku.com/">
+	<input type="hidden" hidden="" id="buid" name="buid" value="youku">
+	<input type="hidden" hidden="" id="pid" name="pid" value="20160317PLF000211">
+	<input type="hidden" hidden="" id="needShowJAQ" name="needShowJAQ" value="">
+	<div id="ajax-form-box"></div>
+	<div class="pt-perspective" id="perspective">
+		<div class="pt-page pt-page-current" id="mainBox">
+			<div>
+				<div class="pb-wrap">
+					<div class="wap-header" id="YT-wap-header" data-title="Login">
+						<a href="javascript:history.back();" class="go-back"></a>
+					</div>
+					<div class="wap-content" id="wapBox">
+						<div>
+							<div id="YT-riskWrap" class="YT-risk-wrap"></div>
+							<div id="YT-loginWrap" class="YT-loginWrap">
+								<div class="YT-loginFrame-main" id="YT-loginFrame-main">
+									
+									<div class="YT-loginFrame-body YT-login-body">
+
+										
+										<form class="YT-form login-form" name="YT-mobileLogin" action="/user/login"  method="post">
+											<ul class="YT-default-list inside" id="YT-mobileLoginList">
+												<li class="YT-account-wrap">
+													<label for="YT-mAccount">
+														<input type="tel" id="YT-mAccount" data-target="YT-cleanMobile" name="name" tabindex="1" maxlength="15" class="YT-form-input"
+														  placeholder="telephone number ">
+													</label>
+													<span class="YT-label-clean" id="YT-cleanMobile" data-target="YT-mAccount"></span>
+												</li>
+												<li>
+													<label for="YT-mPassword">
+														<input type="password" id="YT-mPassword" name="pass" tabindex="2" maxlength="10" class="YT-form-input"
+														 placeholder="password">
+													</label>
+												</li>
+											</ul>
+											
+											<button type="submit" id="YT-mloginSubmit" class="YT-form-btn" data-custom-mid="mLoginSubmit" data-process="Login..." title="login">Login</button>
+										</form>
+									</div>
+									<div class="YT-loginFrame-foot" id="YT-thirdParyBody">
+
+										<!-- <div class="YT-footer">
+											<em>Não tem uma conta ainda?</em>
+											<a href="/">Inscreva-se agora											</a>
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wap-footer"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+</body>
+
+</html>

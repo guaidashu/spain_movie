@@ -1,0 +1,81 @@
+<header style="position: fixed; top: 0px; background-color: rgb(255, 255, 255);">
+    <div class="container">
+        <div class="header-logo">
+            <a title="Descargar y Ver películas y series Online gratis en excelente calidad HD1080p"
+               href="/" id="logo"></a>
+        </div>
+        <div class="mobile-menu"><i class="fa fa-reorder"></i></div>
+        <div class="mobile-search"><i class="fa fa-search"></i></div>
+        <div id="menu">
+            <ul id="menu-main-menu" class="top-menu">
+                <li id="menu-item-11"
+                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-11">
+                    <a href="/">Home</a></li>
+                <li id="menu-item-12"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12">
+                    <a>Category</a>
+                    <div class="sub-container" style="display: none;">
+                        <ul class="sub-menu">
+
+                            {{range .Header.CategoryList}}
+                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a
+                                            href="/page/category?id={{.Id}}">{{.Name}}</a></li>
+                            {{end}}
+                        </ul>
+                    </div>
+                </li>
+{{/*                <li id="menu-item-6267"*/}}
+{{/*                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6267">*/}}
+{{/*                    <a href="#">Years</a>*/}}
+{{/*                    <div class="sub-container" style="display: none;">*/}}
+{{/*                        <ul class="sub-menu">*/}}
+
+{{/*                            {{range .Header.YearsList}}*/}}
+{{/*                                <li class="menu-item menu-item-type-taxonomy menu-item-object-release-year">*/}}
+{{/*                                    <a href="/page/year/{{.}}/">{{.}}</a></li>*/}}
+{{/*                            {{end}}*/}}
+
+{{/*                        </ul>*/}}
+{{/*                    </div>*/}}
+{{/*                </li>*/}}
+{{/*                <li id="menu-item-22775"*/}}
+{{/*                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22775">*/}}
+{{/*                    <a>COUNTRY</a>*/}}
+{{/*                    <div class="sub-container" style="display: none;">*/}}
+{{/*                        <ul class="sub-menu">*/}}
+{{/*                            {{range .Header.CountryList}}*/}}
+{{/*                                <li class="menu-item menu-item-type-taxonomy menu-item-object-country menu-item-22776"><a*/}}
+{{/*                                            href="/page/country/{{.CountryID}}/">{{.CountryName}}</a></li>*/}}
+{{/*                            {{end}}*/}}
+{{/*                        </ul>*/}}
+{{/*                    </div>*/}}
+{{/*                </li>*/}}
+{{/*                <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a*/}}
+{{/*                            href="/page/total/movies">Movie</a></li>*/}}
+{{/*                <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a*/}}
+{{/*                            href="/page/top-imdb/movie">Top IMDb</a></li>*/}}
+                {{/*<li id="menu-item-33362"*/}}
+                    {{/*class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33362"><a*/}}
+                            {{/*href="http://fanpelis.com/a-z-lista/?simbolo=0-9&amp;pg=1">A – Z LISTA</a></li>*/}}
+
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div id="top-user">
+            <div class="top-user-content guest">
+            </div>
+        </div>
+        <div id="search">
+            <div class="search-content">
+                <form method="get" id="searchform" action="/page/search">
+                    <input autocomplete="off" class="form-control search-input" type="text" placeholder="Buscar.."
+                           name="s" id="s" value="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</header>

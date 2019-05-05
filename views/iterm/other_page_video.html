@@ -1,0 +1,21 @@
+<style>
+    .MovItem {
+        position: relative;
+    }
+
+    .movInfo {
+        position: absolute;
+    }
+
+</style>
+<div data-movie-id="7399" class="ml-item MovItem">
+    <a href="/video/play?mv_id={{.Id}}" data-url="" class="ml-mask jt" data-hasqtip="0" oldtitle="{{.Title}}"
+       title="{{.Title}}" aria-describedby="qtip-0">
+        <img data-original="https://s3-us-west-1.amazonaws.com/static-soource/es_movie/images/{{.Id}}.jpg"
+             class="lazy thumb mli-thumb" alt="Arrow"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" style="display: inline-block;">
+        <span class="mli-info">
+            <h2>{{.Title}} </h2>
+        </span>
+    </a>
+</div>

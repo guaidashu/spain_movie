@@ -1,0 +1,157 @@
+<div class="container">
+    <div class="movies-list-wrap mlw-topview mt20">
+        <div class="ml-title">
+            <span class="pull-left">Recommend <i class="fa fa-chevron-right ml10"></i></span>
+            <a href="/page/total/movies" class="pull-right cat-more">More »</a>
+            <ul id="sug-nav" role="tablist" class="nav nav-tabs">
+                <li class="active" data-name="topview-today">
+                    <a data-toggle="tab" role="tab" href="#topview-today" aria-expanded="false">Most visited today </a>
+                </li>
+                <li data-name="top-rating">
+                    <a data-toggle="tab" role="tab" href="#top-rating" aria-expanded="false">Top Rating</a>
+                </li>
+                <li data-name="top-imdb">
+                    <a data-toggle="tab" role="tab" href="#top-imdb" aria-expanded="false">Top IMDb</a>
+                </li>
+                <li data-name="random">
+                    <a data-toggle="tab" role="tab" href="#recomendadas" aria-expanded="false">Random Movie</a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div id="sug-cont" class="tab-content">
+            <div class="movies-list movies-list-full tab-pane in fade active">
+                <div id="content-box">
+                    {{range .SugerenciaData}}
+                        {{template "iterm/video.html" .}}
+                    {{end}}
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="movies-list-wrap mlw-latestmovie">
+        <div class="ml-title">
+						<span class="pull-left">
+							Category							<i class="fa fa-chevron-right ml10"></i>
+						</span>
+            <a href="/page/total/movies" class="pull-right cat-more">
+                More » </a>
+            <ul id="category-nav" role="tablist" class="nav nav-tabs">
+                <li class="active" data-name="">
+                    <a data-toggle="tab" role="tab" href="#movie-general" aria-expanded="false">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> General </a>
+                </li>
+                <li class="" data-name="action">
+                    <a data-toggle="tab" role="tab" href="#movie-accion" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Action </a>
+                </li>
+                <li class="" data-name="comedy">
+                    <a data-toggle="tab" role="tab" href="#movie-comedia" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Comedy </a>
+                </li>
+                <li class="" data-name="science-fiction">
+                    <a data-toggle="tab" role="tab" href="#movie-ciencia" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Science fiction</a>
+                </li>
+                <li class="" data-name="terror">
+                    <a data-toggle="tab" role="tab" href="#movie-terror" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Terror</a>
+                </li>
+                <li class="" data-name="thriller">
+                    <a data-toggle="tab" role="tab" href="#movie-thriler" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Thriller </a>
+                </li>
+                <li class="" data-name="romance">
+                    <a data-toggle="tab" role="tab" href="#movie-romanticas" aria-expanded="false">
+                        <i class="fa fa-heart" aria-hidden="true"></i> Romantic </a>
+                </li>
+                <li class="" data-name="drama">
+                    <a data-toggle="tab" role="tab" href="#movie-drama" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Drama </a>
+                </li>
+                <li class="" data-name="animation">
+                    <a data-toggle="tab" role="tab" href="#movie-animacion" aria-expanded="false">
+                        <i class="fa fa-film" aria-hidden="true"></i> Animation </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div id="new-cont" class="tab-content">
+
+            <div  class="movies-list movies-list-full tab-pane in fade active">
+                <div id="content-box">
+
+                    {{range .LastAdded}}
+                        {{template "iterm/video.html" .}}
+                    {{end}}
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="movies-list-wrap mlw-latestmovie">
+        <div class="ml-title">
+            <span class="pull-left">Download movies<i class="fa fa-chevron-right ml10"></i></span>
+            <a href="/page/total/movies" class="pull-right cat-more">More »</a>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="movies-list movies-list-full tab-pane in fade active">
+
+            {{range .DownloadLeaderboard}}
+                {{template "iterm/video.html" .}}
+            {{end}}
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $('#sug-nav li').click(function () {
+        // $(".sug-nav_li").removeClass("active");
+        $("#sug-nav li").removeClass("active");
+        var types = $(this).attr("data-name");
+        console.log(this);
+        $(this).addClass("active");
+        console.log($("#sug-cont div #content-box"))
+        $("#sug-cont div #content-box").html("eeeqqwrqwr")
+        $.ajax({
+            url: "/update/home/"+ types,
+            success: function (result) {
+                $("#sug-cont div #content-box").html(result);
+            }
+        });
+    });
+</script>
+
+<script>
+    $('#category-nav li').click(function () {
+        // $(".sug-nav_li").removeClass("active");
+        $("#category-nav li").removeClass("active");
+        var types = $(this).attr("data-name");
+        console.log(this);
+        $(this).addClass("active");
+        console.log($("#sug-cont div #content-box"))
+        // $("#new-cont div #content-box").html("eeeqqwrqwr")
+        $.ajax({
+            url: "/update/category/"+ types,
+            success: function (result) {
+                $("#new-cont div #content-box").html(result);
+            }
+        });
+    });
+</script>

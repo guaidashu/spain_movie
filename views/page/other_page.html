@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="pad"></div>
+    <div class="main-content main-category">
+        <!--category-->
+        <div class="movies-list-wrap mlw-category">
+
+            <div class="ml-title ml-title-page">
+                <span>{{.TitleName}}</span>
+                <div class="filter-toggle" style="display:none;"><i class="fa fa-sort mr5"></i>Filter</div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div id="pagination" style="margin-top:10px;">
+                <nav>
+                    {{str2html .pagination}}
+                </nav>
+            </div>
+
+            <div class="movies-list movies-list-full">
+                {{if eq 0 (.OtherMovie|len)}}
+                    <h3 style="margin-left: 16px;">No se han encontrado resultados.</h3>
+                {{else}}
+                    {{range .OtherMovie}}
+                        {{template "iterm/other_page_video.html" .}}
+                    {{end}}
+                {{end}}
+
+            </div>
+
+        </div>
+        <div id="pagination" style="margin-top:10px;">
+            <nav>
+                {{str2html .pagination}}
+            </nav>
+        </div>
+
+
+    </div>
+</div>

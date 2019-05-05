@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1 id="parent">父级页面</h1>
+{{/*<iframe id="myIframe" src="https://openload.co/embed/uL2tyIcCCMI/"></iframe>*/}}
+{{/*<iframe id="myIframe" src="https://www.rapidvideo.com/e/FX0VP66XSB"></iframe>*/}}
+{{/*<iframe id="myIframe" src="https://www.baidu.com"></iframe>*/}}
+HEELLO
+</body>
+<script type="text/javascript">
+    $.ajax({
+        type: 'GET',
+        url: "https://openload.co/embed/uL2tyIcCCMI/",
+        success: function (result) {
+            console.log(result)
+        }
+    });
+    document.onclick = function(){
+    window.onload = function () {
+        var myIframe = document.getElementById("myIframe").contentWindow;
+
+
+        console.log(myIframe.TextEncoder)
+    };
+    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+</script>
+</html>
